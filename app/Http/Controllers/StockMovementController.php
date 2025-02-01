@@ -16,8 +16,8 @@ class StockMovementController extends Controller
             $query->where('product_id', $request->product_id);
         }
 
-        if ($request->has('start_date') && $request->has('end_date')) {
-            $query->whereBetween('created_at', [$request->start_date, $request->end_date]);
+        if ($request->has('start_date') ) {
+            $query->where('created_at', $request->start_date);
         }
 
         $movements = $query->latest()->get();

@@ -20,7 +20,10 @@ class DashboardController extends Controller
             $query->where('product_id', $request->product_id);
         }
 
-       
+        if ($request->has('start_date') ) {
+            $query->where('created_at','LIKE',"%{$request->start_date}%" );
+        }
+
 
         $stockMovements = $query->latest()->get();
 

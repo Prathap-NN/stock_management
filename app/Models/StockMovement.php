@@ -10,7 +10,6 @@ class StockMovement extends Model
     use HasFactory;
     protected $table = 'stock_movement';
 
-    // If you're using the default timestamps, you don't need to set these:
     public $timestamps = true;
     protected $fillable = ['product_id', 'type', 'quantity', 'remarks'];
 

@@ -4,7 +4,6 @@
 <div class="container">
     <h2 class="mb-4">Product List</h2>
 
-    <!-- Success Message -->
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
